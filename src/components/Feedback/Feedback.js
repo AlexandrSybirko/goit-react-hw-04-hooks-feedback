@@ -13,19 +13,19 @@ export default function Feedback() {
   const [bad, setBad] = useState(0);
     
     const feedbackCounter = (e) => {
-        const {action} = e.target.dataset.action
+        const {action} = e.target.dataset;
        
         switch (action) {
       case 'good':
-        setGood(prevState => prevState + 1);
+        setGood(good + 1);
         break;
 
       case 'neutral':
-        setNeutral(prevState => prevState + 1);
+        setNeutral(neutral + 1);
         break;
 
       case 'bad':
-        setBad(prevState => prevState + 1);
+        setBad(bad + 1);
         break;
 
       default:
